@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # Manual define character mapping as some keys match four letters
 code_map = { 'a': '2', 'b': '22', 'c': '222',
              'd': '3', 'e': '33', 'f': '333',

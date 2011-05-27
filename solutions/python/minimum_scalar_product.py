@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 def run_one(v1, v2):
     # The minimum scalar product is when the largest value from each
     # vector is multiplied by the smallest value from the other vector
