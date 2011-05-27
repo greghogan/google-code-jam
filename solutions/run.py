@@ -6,14 +6,13 @@ import sys
 from collections import deque
 from difflib import context_diff
 
-from python import alien_numbers
-from python import store_credit, reverse_words, t9_spelling
-
 contests = {
-    '2010 Africa':
-        {'qualification round': [store_credit, reverse_words, t9_spelling]},
     '2008 Practice Contests':
-        {'practice problems': [alien_numbers]}
+        {'practice problems': ['Alien Numbers']},
+    '2008':
+        {'round 1a': ['Minimum Scalar Product']},
+    '2010 Africa':
+        {'qualification round': ['Store Credit', 'Reverse Words', 'T9 Spelling']}
 }
 
 
@@ -64,6 +63,11 @@ def run_program(contest_name, round_name, program):
 if __name__ == '__main__':
     for contest_name, round in contests.iteritems():
         for round_name, programs in round.iteritems():
-            for program in programs:
-                print "Running " + program.__name__
+            for program_name in programs:
+                print program_name
+
+                module_name = 'python.' + program_name.replace(' ', '_').lower()
+                __import__(module_name)
+                program = sys.modules[module_name]
+
                 run_program(contest_name, round_name, program)
