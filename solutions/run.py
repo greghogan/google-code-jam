@@ -15,7 +15,10 @@ contests = {
         {'qualification round': ['Alien Language'],
          'round 1c': ['All Your Base']},
     '2010 Africa':
-        {'qualification round': ['Store Credit', 'Reverse Words', 'T9 Spelling']}
+        {'qualification round': ['Store Credit', 'Reverse Words', 'T9 Spelling']},
+    '2010':
+        {'round 1b': ['File Fix-It'],
+         'round 1c': ['Rope Intranet']}
 }
 
 
@@ -54,8 +57,7 @@ def execute_program(program, infile, outfile=None):
         print
 
 
-def run_program(contest_name, round_name, program):
-    program_name = program.__name__.split('.')[-1].replace('_', ' ')
+def run_program(contest_name, round_name, program_name, program):
     io = os.path.join(problems_path(), contest_name, round_name, program_name, 'io')
 
     for infile in glob.glob(io + '/*.in'):
@@ -72,11 +74,11 @@ def run_programs(programs_to_run=None):
 
                 print program_name
 
-                module_name = 'python.' + program_name.replace(' ', '_').lower()
+                module_name = 'python.' + program_name.replace(' ', '_').replace('-', '').lower()
                 __import__(module_name)
                 program = sys.modules[module_name]
 
-                run_program(contest_name, round_name, program)
+                run_program(contest_name, round_name, program_name, program)
 
 
 if __name__ == '__main__':
