@@ -11,6 +11,9 @@ contests = {
         {'practice problems': ['Alien Numbers']},
     '2008':
         {'round 1a': ['Minimum Scalar Product']},
+    '2009':
+        {'qualification round': ['Alien Language'],
+         'round 1c': ['All Your Base']},
     '2010 Africa':
         {'qualification round': ['Store Credit', 'Reverse Words', 'T9 Spelling']}
 }
@@ -60,10 +63,13 @@ def run_program(contest_name, round_name, program):
         execute_program(program, infile, outfile)
 
 
-if __name__ == '__main__':
+def run_programs(programs_to_run=None):
     for contest_name, round in contests.iteritems():
         for round_name, programs in round.iteritems():
             for program_name in programs:
+                if programs_to_run and program_name not in programs_to_run:
+                    continue
+
                 print program_name
 
                 module_name = 'python.' + program_name.replace(' ', '_').lower()
@@ -71,3 +77,7 @@ if __name__ == '__main__':
                 program = sys.modules[module_name]
 
                 run_program(contest_name, round_name, program)
+
+
+if __name__ == '__main__':
+    run_programs(sys.argv[1:])

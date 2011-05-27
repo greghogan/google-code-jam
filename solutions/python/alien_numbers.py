@@ -21,7 +21,6 @@ def run_one(source_number, source_language, target_language):
     return target_number
 
 
-
 def run(lines):
     output = []
 
