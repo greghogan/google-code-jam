@@ -11,23 +11,23 @@ def run(lines):
         N, M = [int(x) for x in lines.popleft().split()]
 
         # Existing directories
-        directories = set()
+        existing = set()
         for n in range(N):
-            directories.add(lines.popleft().rstrip('\r\n'))
+            existing.add(lines.popleft().rstrip('\r\n'))
 
-        # Count each directory which must be created
-        count = 0
+        # New directories (and parent directories)
+        creating = set()
         for m in range(M):
-            directory = lines.popleft().strip('\r\n')
+            full_path = lines.popleft().strip('\r\n')
 
-            # Check whether each directory in the path exists
-            subdirectory = ''
-            for part in directory[1:].split('/'):
-                subdirectory += '/' + part
-                if subdirectory not in directories:
-                    # Add newly created directories to the set
-                    directories.add(subdirectory)
-                    count += 1
+            directory = ''
+            # Split on '/' (first removing the leading slash)
+            for part in full_path[1:].split('/'):
+                directory += '/' + part
+                creating.add(directory)
+
+        # Remove existing directories and count
+        count = len(creating - existing)
 
         output.append('Case #{0}: {1}'.format(t + 1, count))
 

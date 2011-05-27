@@ -1,0 +1,19 @@
+This is an easy problem. Especially when efficiency is not a big issue here.
+
+For each directory you want to create, we get all the directories you need.
+Those are all the ancestors of that directory. For example, if one items in the
+input of wanted directories is
+
+    /home/gcj/round1b/problema/input
+
+We need all the following
+
+    /home
+    /home/gcj
+    /home/gcj/round1b
+    /home/gcj/round1b/problema
+    /home/gcj/round1b/problema/input
+
+Let A be the collection of all the directories we need, and B be the collection
+of all the directories that are already exist. Simply count how many elements
+are from A but not B. You need to use one mkdir for each of them.
