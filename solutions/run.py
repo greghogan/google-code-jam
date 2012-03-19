@@ -18,13 +18,15 @@ contests = {
         {'qualification round': ['Store Credit', 'Reverse Words', 'T9 Spelling']},
     '2010':
         {'round 1b': ['File Fix-It'],
-         'round 1c': ['Rope Intranet']}
+         'round 1c': ['Rope Intranet']},
+    '2011':
+        {'qualification round': ['Bot Trust']}
 }
 
 
 def problems_path():
-    script_path = os.path.abspath( __file__ )
-    script_base = os.path.basename(script_path)
+    script_path = os.path.abspath(__file__)
+    script_base = os.path.dirname(script_path)
 
     return os.path.join(script_base, '../problems')
 
@@ -59,7 +61,7 @@ def execute_program(program, infile, outfile=None):
 
 def run_program(contest_name, round_name, program_name, program):
     io = os.path.join(problems_path(), contest_name, round_name, program_name, 'io')
-
+    print io
     for infile in glob.glob(io + '/*.in'):
         outfile = infile[:-3] + '.out'
         execute_program(program, infile, outfile)
