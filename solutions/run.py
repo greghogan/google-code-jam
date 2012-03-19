@@ -20,7 +20,7 @@ contests = {
         {'round 1b': ['File Fix-It'],
          'round 1c': ['Rope Intranet']},
     '2011':
-        {'qualification round': ['Bot Trust']}
+        {'qualification round': ['Bot Trust', 'Magicka']}
 }
 
 
