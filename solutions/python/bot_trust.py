@@ -38,13 +38,13 @@ def run(lines):
     # Number of test cases
     T = int(lines.popleft())
     for t in range(T):
-        l = lines.popleft().split(' ')
+        items = lines.popleft().split(' ')
 
         # Number of buttons to be pressed
-        N = int(l.pop(0))
+        N = int(items.pop(0))
 
         # Store (robot, door) pairs in a list
-        buttons = zip(l[0::2], map(int, l[1::2]))
+        buttons = zip(items[0::2], map(int, items[1::2]))
 
         time = run_one(buttons)
 

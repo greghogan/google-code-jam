@@ -63,7 +63,7 @@ def execute_program(program, infile, outfile=None):
 
 def run_program(contest_name, round_name, program_name, program):
     io = os.path.join(problems_path(), contest_name, round_name, program_name, 'io')
-    print io
+
     for infile in glob.glob(io + '/*.in'):
         outfile = infile[:-3] + '.out'
         execute_program(program, infile, outfile)

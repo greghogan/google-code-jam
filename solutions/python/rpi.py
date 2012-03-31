@@ -49,7 +49,7 @@ def run_one(teams, schedule):
             sum += owp[opp]
         oowp.append(sum/len(games[team]))
 
-    # compute rpi for each team
+    # Compute rpi for each team
     rpi = [0.25 * wp[x] + 0.50 * owp[x] + 0.25 * oowp[x] for x in range(teams)]
 
     return rpi
