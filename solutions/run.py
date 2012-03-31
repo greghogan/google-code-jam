@@ -21,6 +21,7 @@ contests = {
          'round 1c': ['Rope Intranet']},
     '2011':
         {'qualification round': ['Bot Trust', 'Magicka', 'Candy Splitting', 'GoroSort'],
+         'round 1a': ['Freecell Statistics'],
          'round 1b': ['RPI']}
 }
 
