@@ -20,7 +20,8 @@ contests = {
         {'round 1b': ['File Fix-It'],
          'round 1c': ['Rope Intranet']},
     '2011':
-        {'qualification round': ['Bot Trust', 'Magicka', 'Candy Splitting']}
+        {'qualification round': ['Bot Trust', 'Magicka', 'Candy Splitting', 'GoroSort'],
+         'round 1b': ['RPI']}
 }
 
 
@@ -45,7 +46,7 @@ def execute_program(program, infile, outfile=None):
 
     prog_out = []
     with open(infile) as file:
-        lines = deque(file.readlines())
+        lines = deque([line.rstrip('\r\n') for line in file.readlines()])
         prog_out.extend(program.run(lines))
 
     if outfile and os.path.isfile(outfile):
