@@ -20,7 +20,7 @@ contests = {
         {'round 1b': ['File Fix-It'],
          'round 1c': ['Rope Intranet']},
     '2011 EuroPython':
-        ['Centauri Prime'],
+        ['Centauri Prime', 'Music Collection'],
     '2011':
         {'qualification round': ['Bot Trust', 'Magicka', 'Candy Splitting', 'GoroSort'],
          'round 1a': ['Freecell Statistics'],
