@@ -61,29 +61,32 @@ def execute_program(program, infile, outfile=None):
         print
 
 
-def run_program(contest_name, round_name, program_name, program):
-    io = os.path.join(problems_path(), contest_name, round_name, program_name, 'io')
+def run_program(program_directory, program_name):
+    print program_name
+
+    io = os.path.join(program_directory, 'io')
+
+    module_name = 'python.' + program_name.replace(' ', '_').replace('-', '').lower()
+    __import__(module_name)
+    program = sys.modules[module_name]
 
     for infile in glob.glob(io + '/*.in'):
         outfile = infile[:-3] + '.out'
         execute_program(program, infile, outfile)
 
 
-def run_programs(programs_to_run=None):
-    for contest_name, round in contests.iteritems():
-        for round_name, programs in round.iteritems():
-            for program_name in programs:
-                if programs_to_run and program_name not in programs_to_run:
-                    continue
-
-                print program_name
-
-                module_name = 'python.' + program_name.replace(' ', '_').replace('-', '').lower()
-                __import__(module_name)
-                program = sys.modules[module_name]
-
-                run_program(contest_name, round_name, program_name, program)
+def run_programs(contest_directory, contests, programs_to_run=None):
+    if type(contests) is list:
+        for program_name in contests:
+            if programs_to_run and program_name not in programs_to_run:
+                continue
+            program_directory = os.path.join(contest_directory, program_name)
+            run_program(program_directory, program_name)
+    else:
+        for contest_name, contests in contests.iteritems():
+            directory = os.path.join(contest_directory, contest_name)
+            run_programs(directory, contests, programs_to_run)
 
 
 if __name__ == '__main__':
-    run_programs(sys.argv[1:])
+    run_programs(problems_path(), contests, sys.argv[1:])

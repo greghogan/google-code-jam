@@ -66,20 +66,22 @@ correct.
 
 Limits
 
-1 ² T ² 20.
-If the schedule contains a '1' in row i, column j, then it contains a '0' in
-row j, column i.
-If the schedule contains a '0' in row i, column j, then it contains a '1' in
-row j, column i.
-If the schedule contains a '.' in row i, column j, then it contains a '.' in
-row j, column i.
+  1 â‰¤ T â‰¤ 20.
+
+If the schedule contains a '1' in row i, column j, then it contains a '0'
+  in row j, column i.
+If the schedule contains a '0' in row i, column j, then it contains a '1'
+  in row j, column i.
+If the schedule contains a '.' in row i, column j, then it contains a '.'
+  in row j, column i.
 Every team plays at least two other teams.
 No two teams play each other twice.
 No team plays itself.
+
 Small dataset
 
-3 ² N ² 10.
+  3 â‰¤ N â‰¤ 10.
 
 Large dataset
 
-3 ² N ² 100.
+  3 â‰¤ N â‰¤ 100.

@@ -27,6 +27,7 @@ Time | Orange           | Blue
   4  | Move to button 4 | Move to button 2
   5  | Stay at button 4 | Push button 2
   6  | Push button 4    | Stay at button 2
+
 Note that Blue has to wait until Orange has completely finished pushing O 2
 before it can start pushing B 1.
 Input
@@ -47,14 +48,14 @@ for the robots to push the given buttons, in order.
 
 Limits
 
-1 ² Pi ² 100 for all i.
+1 â‰¤ Pi â‰¤ 100 for all i.
 
 Small dataset
 
-1 ² T ² 20.
-1 ² N ² 10.
+1 â‰¤ T â‰¤ 20.
+1 â‰¤ N â‰¤ 10.
 
 Large dataset
 
-1 ² T ² 100.
-1 ² N ² 100.
+1 â‰¤ T â‰¤ 100.
+1 â‰¤ N â‰¤ 100.

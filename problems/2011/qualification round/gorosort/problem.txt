@@ -34,13 +34,15 @@ or relative error of at most 10-6 will be considered correct.
 
 Limits
 
-1 ² T ² 100;
+  1 â‰¤ T â‰¤ 100;
+
 The second line of each test case will contain a permutation of the N smallest
 positive integers.
+
 Small dataset
 
-1 ² N ² 10;
+  1 â‰¤ N â‰¤ 10;
 
 Large dataset
 
-1 ² N ² 1000;
+  1 â‰¤ N â‰¤ 1000;

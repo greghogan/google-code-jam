@@ -67,19 +67,23 @@ output for examples.
 Limits
 
 1 ≤ T ≤ 100.
+
 Each pair of base elements may only appear together in one combination, though
 they may appear in a combination and also be opposed to each other.
+
 No base element may be opposed to itself.
+
 Unlike in the computer game Magicka, there is no limit to the length of the
 element list.
 
 Small dataset
 
-0 ≤ C ≤ 1.
-0 ≤ D ≤ 1.
-1 ≤ N ≤ 10.
+  0 ≤ C ≤ 1.
+  0 ≤ D ≤ 1.
+  1 ≤ N ≤ 10.
+
 Large dataset
 
-0 ≤ C ≤ 36.
-0 ≤ D ≤ 28.
-1 ≤ N ≤ 100.
+  0 ≤ C ≤ 36.
+  0 ≤ D ≤ 28.
+  1 ≤ N ≤ 100.

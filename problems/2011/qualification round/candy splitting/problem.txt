@@ -50,12 +50,13 @@ pile of candies that Sean will keep.
 
 Limits
 
-1 ² T ² 100.
-1 ² Ci ² 106.
+  1 â‰¤ T â‰¤ 100.
+  1 â‰¤ Ci â‰¤ 10^6.
+
 Small dataset
 
-2 ² N ² 15.
+  2 â‰¤ N â‰¤ 15.
 
 Large dataset
 
-2 ² N ² 1000.
+  2 â‰¤ N â‰¤ 1000.

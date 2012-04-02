@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-from collections import defaultdict
-
 def run_one(N, PD, PG):
     # If all games have been won, then every game today must have been won
     if PG == 100 and PD != 100:

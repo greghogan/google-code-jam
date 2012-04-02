@@ -27,18 +27,18 @@ case number (starting from 1) and y is either "Possible" or "Broken".
 
 Limits
 
-0 ≤ PD ≤ 100;
-0 ≤ PG ≤ 100.
+  0 ≤ PD ≤ 100;
+  0 ≤ PG ≤ 100.
 
 Small dataset
 
-1 ≤ T ≤ 100;
-1 ≤ N ≤ 10.
+  1 ≤ T ≤ 100;
+  1 ≤ N ≤ 10.
 
 Large dataset
 
-1 ≤ T ≤ 2000;
-1 ≤ N ≤ 10^15.
+  1 ≤ T ≤ 2000;
+  1 ≤ N ≤ 10^15.
 
 Sample
 
