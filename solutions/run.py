@@ -23,7 +23,7 @@ contests = {
         ['Centauri Prime', 'Music Collection', 'Irregular Expressions', 'Twibet'],
     '2011':
         {'qualification round': ['Bot Trust', 'Magicka', 'Candy Splitting', 'GoroSort'],
-         'round 1a': ['Freecell Statistics'],
+         'round 1a': ['Freecell Statistics', 'Killer Word'],
          'round 1b': ['RPI']}
 }
 
@@ -63,7 +63,7 @@ def execute_program(program, infile, outfile=None):
         print
 
 
-def run_program(program_directory, program_name):
+def run_program(program_directory, program_name, program_inputs_to_run):
     print program_name
 
     io = os.path.join(program_directory, 'io')
@@ -73,22 +73,27 @@ def run_program(program_directory, program_name):
     program = sys.modules[module_name]
 
     for infile in glob.glob(io + '/*.in'):
+        if program_inputs_to_run and infile.split('/')[-1] not in program_inputs_to_run:
+            continue
         outfile = infile[:-3] + '.out'
         execute_program(program, infile, outfile)
 
 
-def run_programs(contest_directory, contests, programs_to_run=None):
+def run_programs(contest_directory, contests, programs_to_run=None, program_inputs_to_run=None):
     if type(contests) is list:
         for program_name in contests:
             if programs_to_run and program_name not in programs_to_run:
                 continue
             program_directory = os.path.join(contest_directory, program_name)
-            run_program(program_directory, program_name)
+            run_program(program_directory, program_name, program_inputs_to_run)
     else:
         for contest_name, contests in contests.iteritems():
             directory = os.path.join(contest_directory, contest_name)
-            run_programs(directory, contests, programs_to_run)
+            run_programs(directory, contests, programs_to_run, program_inputs_to_run)
 
 
 if __name__ == '__main__':
-    run_programs(problems_path(), contests, sys.argv[1:])
+    program_to_run = sys.argv[1:2] or None
+    program_inputs_to_run = sys.argv[2:] or None
+
+    run_programs(problems_path(), contests, program_to_run, program_inputs_to_run)
