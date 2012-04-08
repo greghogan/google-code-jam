@@ -18,7 +18,7 @@ contests = {
     '2010 Africa':
         {'qualification round': ['Store Credit', 'Reverse Words', 'T9 Spelling']},
     '2010':
-        {'qualification round': ['Fair Warning'],
+        {'qualification round': ['Snapper Chain', 'Fair Warning'],
          'round 1b': ['File Fix-It'],
          'round 1c': ['Rope Intranet']},
     '2011 EuroPython':
@@ -68,7 +68,7 @@ def execute_program(program, infile, outfile=None):
 def run_program(program_directory, program_name, program_inputs_to_run):
     print program_name
 
-    io = os.path.join(program_directory, 'io')
+    io = os.path.join(program_directory, 'io').lower()
 
     module_name = 'python.' + program_name.replace(' ', '_').replace('-', '').lower()
     __import__(module_name)
