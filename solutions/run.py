@@ -8,7 +8,8 @@ from difflib import context_diff
 
 contests = {
     '2008 Practice Contests':
-        {'practice problems': ['Alien Numbers']},
+        {'practice problems': ['Alien Numbers'],
+         'practice contest': ['Old Magician']},
     '2008':
         {'round 1a': ['Minimum Scalar Product']},
     '2009':
