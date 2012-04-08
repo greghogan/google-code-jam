@@ -18,7 +18,8 @@ contests = {
     '2010 Africa':
         {'qualification round': ['Store Credit', 'Reverse Words', 'T9 Spelling']},
     '2010':
-        {'round 1b': ['File Fix-It'],
+        {'qualification round': ['Fair Warning'],
+         'round 1b': ['File Fix-It'],
          'round 1c': ['Rope Intranet']},
     '2011 EuroPython':
         ['Centauri Prime', 'Music Collection', 'Irregular Expressions', 'Twibet'],
