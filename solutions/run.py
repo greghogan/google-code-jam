@@ -16,7 +16,8 @@ contests = {
         {'qualification round': ['Alien Language'],
          'round 1c': ['All Your Base']},
     '2010 Africa':
-        {'qualification round': ['Store Credit', 'Reverse Words', 'T9 Spelling']},
+        {'qualification round': ['Store Credit', 'Reverse Words', 'T9 Spelling'],
+         'online competition': ['Odd Man Out']},
     '2010':
         {'qualification round': ['Snapper Chain', 'Fair Warning'],
          'round 1b': ['File Fix-It'],
