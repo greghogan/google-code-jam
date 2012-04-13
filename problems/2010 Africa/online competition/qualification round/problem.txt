@@ -1,0 +1,39 @@
+Problem
+
+You've just advanced from the Qualification Round of Google Code Jam Africa
+2010, and you want to know how many of your fellow contestants advanced with
+you. To give yourself a challenge, you've decided only to look at how many
+people solved each problem.
+
+The Qualification Round consisted of P problems; the ith problem was fully
+solved by Si contestants. Contestants had to solve C problems in order to
+advance to the next round. Your job is to figure out, using only that
+information, the maximum number of contestants who could have advanced.
+
+Input
+
+The first line of the input gives the number of test cases, T. T lines follow.
+Each will consist only of space-separated integers: first P, then C, then P
+integers S0...SP-1.
+
+Output
+
+For each test case, output one line containing "Case #x: y", where x is the
+case number (starting from 1) and y is the maximum number of contestants who
+could have advanced (in other words, the maximum number of contestants who
+could have solved at least C problems).
+
+Limits
+
+  1 ≤ T ≤ 100
+  1 ≤ C ≤ P
+
+Small dataset
+
+  1 ≤ P ≤ 6
+  0 ≤ Si ≤ 1000
+
+Large dataset
+
+  1 ≤ P ≤ 60
+  0 ≤ Si ≤ 10^17
