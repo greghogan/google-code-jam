@@ -27,7 +27,9 @@ contests = {
     '2011':
         {'qualification round': ['Bot Trust', 'Magicka', 'Candy Splitting', 'GoroSort'],
          'round 1a': ['Freecell Statistics', 'Killer Word'],
-         'round 1b': ['RPI']}
+         'round 1b': ['RPI']},
+    '2012':
+        {'qualification round': ['Speaking in Tongues']}
 }
 
 
