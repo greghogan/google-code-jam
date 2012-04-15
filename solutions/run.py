@@ -29,7 +29,7 @@ contests = {
          'round 1a': ['Freecell Statistics', 'Killer Word'],
          'round 1b': ['RPI']},
     '2012':
-        {'qualification round': ['Speaking in Tongues', 'Dancing with the Googlers']}
+        {'qualification round': ['Speaking in Tongues', 'Dancing with the Googlers', 'Recycled Numbers']}
 }
 
 
